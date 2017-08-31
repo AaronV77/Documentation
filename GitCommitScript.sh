@@ -23,6 +23,7 @@ then
 	echo "Dijkstras_Algorithm: ssh - git@github.com:AaronV77/Dijkstras_Algorithm.git"
 	echo "Headers: ssh - git@github.com:AaronV77/Headers.git"
 	echo "Documentation: ssh - git@github.com:AaronV77/Documentation.git"
+    echo "Web: ssh - git@github.com:AaronV77/Web.git" 
 	echo""
 	read -p "Commit message: " commitMessage								# Get the commit message.	
 	read -p "GitHub Repo. URL: " repoURL									# Get the GitHub ssh download.
@@ -41,6 +42,7 @@ else
 	echo "Dijkstras_Algorithm: ssh - git@github.com:AaronV77/Dijkstras_Algorithm.git"
 	echo "Headers: ssh - git@github.com:AaronV77/Headers.git"
 	echo "Documentation: ssh - git@github.com:AaronV77/Documentation.git"
+    echo "Web: ssh - git@github.com:AaronV77/Web.git"
 	echo ""
 	echo "git remote add origin (reopo url)"
 	echo "git push origin master"
