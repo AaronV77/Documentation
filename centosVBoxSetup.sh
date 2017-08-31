@@ -7,7 +7,6 @@ sudo passwd
 su
 yum update
 yum update kernel*
-yum install git
 mkdir /media/VirtualBoxGuestAdditions
 mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
