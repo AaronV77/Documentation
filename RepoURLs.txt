@@ -1,10 +1,8 @@
 
 All the Repo URL's just in case I can't get to git hub or don't want to login.
 
-Multi-Threaded_Linked_List: ssh - git@github.com:AaronV77/Multi-Thread_Linked_List.git, https - https://github.com/AaronV77/Multi-Thread_Linked_List.git
-Number_Generator: ssh - git@github.com:AaronV77/Number_Generator.git, https - https://github.com/AaronV77/Number_Generator.git
-Standard_Matching_Algorithm: ssh - git@github.com:AaronV77/Standard_Matching_Algorithm.git, https - https://github.com/AaronV77/Standard_Matching_Algorithm.git
-Depth_And_Breadth_First_Search_Algorithm: ssh - git@github.com:AaronV77/Depth_And_Breadth_First_Search_Algorithm.git, https - https://github.com/AaronV77/Depth_And_Breadth_First_Search_Algorithm.git
-Dijkstras_Algorithm: ssh - git@github.com:AaronV77/Dijkstras_Algorithm.git, https - https://github.com/AaronV77/Dijkstras_Algorithm.git
+Bourne_Again_and_Again_Shell: ssh - git@github.com:AaronV77/Bourne_Again_and_Again_Shell.git, https - https://github.com/AaronV77/Bourne_Again_and_Again_Shell.git
 Headers: ssh - git@github.com:AaronV77/Headers.git, https - https://github.com/AaronV77/Headers.git
 Documentation: ssh - git@github.com:AaronV77/Documentation.git, https - https://github.com/AaronV77/Documentation.git
+Web: ssh - git@github.com:AaronV77/Web.git, https - https://github.com/AaronV77/Web.git
+Algorithms: ssh - git@github.com:AaronV77/Algorithms.git, https - https://github.com/AaronV77/Algorithms.git
