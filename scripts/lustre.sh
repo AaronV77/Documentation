@@ -44,6 +44,7 @@ wget http://download.zfsonlinux.org/epel/zfs-release.el7_4.noarch.rpm
 
 yum install zfs-release.el7_4.noarch.rpm
 yum upgrade e2fsprogs
+yum install lustre-tests
 
 fi
 
