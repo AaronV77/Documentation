@@ -8,7 +8,7 @@ else
 
 read -p "Is this an ost server? (y/n): " ost
 
-	if [ ("$ost" == "y") -o ("$ost" == "Y") ]
+	if [ "$ost" == "y" ]
 	then
 
 		read -p "MGS node IP address: " address
@@ -24,7 +24,7 @@ read -p "Is this an ost server? (y/n): " ost
 		df -h
 		mv lustre-server-P2.sh /root
 
-	elif [ ("$ost" == "n") -o ("$ost" == "N") ]
+	elif ["$ost" == "n" ]
 	then 
 	
 		ifup enp0s8
