@@ -8,38 +8,41 @@ else
 
 read -p "Is this an ost server? (y/n): " ost
 
-if [ "$ost" == "y" | "$ost" == "Y" ]
-then
+	if [ "$ost" == "y" | "$ost" == "Y" ]
+	then
 
-read -p "MGS node IP address: " address
-ifup enp0s8
-modprobe lnet
-lctl network up
-lctl list_nids
-mkfs.lustre --ost --fsname=temp --mgsnode=$address@tcp0 --index=0 /dev/sdb
-mkdir /mnt/ost
-mount -t lustre /dev/sdb /mnt/ost
-mount
-reset
-df -h
-mv lustre-server-P2.sh /root
+		read -p "MGS node IP address: " address
+		ifup enp0s8
+		modprobe lnet
+		lctl network up
+		lctl list_nids
+		mkfs.lustre --ost --fsname=temp --mgsnode=$address@tcp0 --index=0 /dev/sdb
+		mkdir /mnt/ost
+		mount -t lustre /dev/sdb /mnt/ost
+		mount
+		reset
+		df -h
+		mv lustre-server-P2.sh /root
 
-else if [ "$ost" == "n" | "$ost" == "N" ]
+	elif [ "$ost" == "n" | "$ost" == "N" ]
+	then 
+	
+		ifup enp0s8
+		modprobe lnet
+		lctl network up
+		lctl list_nids
+		mkfs.lustre --fsname=temp --mgs --mdt --index=0 /dev/sdb
+		mkdir /mnt/mdt
+		mount -t lustre /dev/sdb /mnt/ost
+		mount
+		reset
+		df -h
+		mv lustre-server-P2.sh /root
 
-ifup enp0s8
-modprobe lnet
-lctl network up
-lctl list_nids
-mkfs.lustre --fsname=temp --mgs --mdt --index=0 /dev/sdb
-mkdir /mnt/mdt
-mount -t lustre /dev/sdb /mnt/ost
-mount
-reset
-df -h
-mv lustre-server-P2.sh /root
+	else 
 
-else 
+	echo " Sorry didn't understand the input." 
 
-echo " Sorry didn't understand the input." 
+	fi
 
 fi
