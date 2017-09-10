@@ -1,7 +1,15 @@
 
-This repository is used to carry the specific commands for using git featurs on
-Linux command line. This will also store any other documenation that I see fit 
-for future use.
+This repository is used to consolidate all the notes and articles that I commonly need 
+on a dail basis. The documents that are in this file are very usefully because all the 
+guides online are crap or don't give you every step. These guides do and how / what I 
+used inorder to accomplish the tast. I think that these should be avaliable to the public
+and if there are any questions then please forward them to me.
+
+As for the scripts folder, the directory obviously is about scripts. There are ones for 
+operating systems that have just been installed and I want to set them up quickly. Since
+I do a lot of work with virtual machines it is a paint to constantly type all the commands. 
+There are even some for setting up lustre as or right now. There will be another README
+in that directory.
 
 Author: Aaron Valoroso
-
+Date: 9/9/2017
