@@ -1,9 +1,0 @@
-
-These scripts are for working with the Lustre File system. These are only
-ment to setup the basics for a Lustre Server and Client. If you end up using
-these then you will have to still mount the servers inorder to setup the
-system. The same is applied for the clients. Please see the word documentation
-inorder to see how to properly start / finish setting up a Lustre File System.
-
-Author: Aaron Valoroso
-Date: 9/9/2017
