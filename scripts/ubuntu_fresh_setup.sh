@@ -27,6 +27,9 @@ then
 	gsettings set com.canonical.Unity.Launcher launcher-position Bottom	# Move the navigation bar to the bottom of the screen.
 	cd /usr/share/applications											# Change directories.
 	mv ubuntu-amazon-default.desktop ../~ubuntu-amazon-default.desktop	# Comment out the file so that Amazon app / link is non-exsisting.
+	git clone https://www.github.com/codebrainz/geany-themes
+	cd /geany-themes
+	./install.sh
 fi
 
 reset
