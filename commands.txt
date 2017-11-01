@@ -1,0 +1,78 @@
+
+
+	id 										- Displays user information.
+	ps 										- Shows the current working processes.
+	chown 									- Changes the owner of the file / directory.
+	chgrp 									- Changes the group owner of the file / directory.
+	groups									- Will display all the groups on the system.
+	pwck									- Resets the /etc/passwd file.
+
+	grep "group" /etc/group 				- This will show who is in the group.
+	groupadd "name"							- Will add a new group to the system.
+	groupmod -g "id" "group name"			- Change the group id.
+	groupdel "group" 						- Deletes a group in linux.
+
+	hostnamectl set-hostname "name" 		- Change the hostname.
+
+	usermod -l "new name" "old name" 		- Change the username.
+	usermod -u "id" "username"				- Change the user id.
+	usermod -g "group name" "user"			- Will change the users primary group.
+	usermod -a -G "group" "user" 			- Will add the user to the group.
+	userdel —remove user1
+
+	systemctl status firewalld
+	systemctl stop firewalld
+	systemctl disable firewalld
+	systemctl restart network
+
+	firewall-cmd --get-active-zones
+	firewall-cmd --zone=public --add-port=2888/tcp --permanet
+	firewall-cmd --reload
+	firewall-cmd --zond=public --remove-port=10050/tcp
+	firewall-cmd --runtime-to-permanent
+	firewall-cmd --reload
+
+	scp "the file / directory you want"	"remote location":		- Moves a given file through ssh.
+	cat file1 >> file2											- Adds the contents from file1 to file2.
+	cp -a source/. dest/.										- Will move the entire contents of the source folder to the destination folder.
+	cat /etc/redhat-release										- This will return the RHEL version on RedHat operating systems.
+
+	yum cleann all												- Cleans all the repodata up for isntalls
+	yum remove "packagename" 									- Uninstalls the given package.
+
+	---- Vocabulary ----
+
+	default gateway - in computer networking is the node that is assumed to 
+	know how to forward packets on to other networks. Typically, in a TCP/IP
+	network, nodes such as servers, workstations and network devices each
+	have a defined a defualt route setting.
+		
+	Netmask - is a 32-bit mask used to divide an IP address into subnets
+	and specify the network's available hosts. In a netmask, two bits are 
+	always automatically assigned. 
+		
+	Not attached 						- In this mode, VirtualBox reports to the guest that a network card is present, but that there is no connection -- as if no Ethernet cable was plugged into the card. This way it is possible to "pull" the virtual Ethernet cable and disrupt the connection, which can be useful to inform a guest operating system that no network connection is available and enforce a reconfiguration.
+	Network Address Translation (NAT) 	- If all you want is to browse the Web, download files and view e-mail inside the guest, then this default mode should be sufficient for you, and you can safely skip the rest of this section. Please note that there are certain limitations when using Windows file sharing (see Section 6.3.3, “NAT limitations” for details).
+	NAT Network 						- The NAT network is a new NAT flavour introduced in VirtualBox 4.3. See 6.4 for details.
+	Bridged networking 					- This is for more advanced networking needs such as network simulations and running servers in a guest. When enabled, VirtualBox connects to one of your installed network cards and exchanges network packets directly, circumventing your host operating system's network stack.
+	Internal networking 				- This can be used to create a different kind of software-based network which is visible to selected virtual machines, but not to applications running on the host or to the outside world.
+	Host-only networking 				- This can be used to create a network containing the host and a set of virtual machines, without the need for the host's physical network interface. Instead, a virtual network interface (similar to a loopback interface) is created on the host, providing connectivity among virtual machines and the host.
+	Generic networking 					- Rarely used modes share the same generic network interface, by allowing the user to select a driver which can be included with VirtualBox or be distributed in an extension pack.	
+		
+	---- Process for creating a new user ----
+	useradd -u 1000 -g 500 -d /users/user1 user1	- Create a user with a uid, gid, and a home directory
+	passed user1									- Give the user a new password.
+
+	---- Process for changing a user details ----
+	usermod -l node2 node3							- Change the username.
+	groupadd node2									- Create a new group.
+	usermod -g node2 node2							- Add the a new primary group to the user.
+	groupdel node3									- Delete the previous group.
+	group -g 1000 node2								- Change the new group id to the one that the previous primary group had.
+	nano /etc/passwd								- Go in here and make sure that everything adds up.
+	pwck											- Reset the /etc/passwd file.
+	mv /home/node3 /home/node2						- Change the directory name of the users home destination.
+	su - node2										- Log into the new user.
+	exit 											
+	log into node2 then reboot
+

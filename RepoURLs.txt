@@ -1,8 +1,0 @@
-
-All the Repo URL's just in case I can't get to git hub or don't want to login.
-
-Bourne_Again_and_Again_Shell: ssh - git@github.com:AaronV77/Bourne_Again_and_Again_Shell.git, https - https://github.com/AaronV77/Bourne_Again_and_Again_Shell.git
-Headers: ssh - git@github.com:AaronV77/Headers.git, https - https://github.com/AaronV77/Headers.git
-Documentation: ssh - git@github.com:AaronV77/Documentation.git, https - https://github.com/AaronV77/Documentation.git
-Web: ssh - git@github.com:AaronV77/Web.git, https - https://github.com/AaronV77/Web.git
-Algorithms: ssh - git@github.com:AaronV77/Algorithms.git, https - https://github.com/AaronV77/Algorithms.git
