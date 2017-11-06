@@ -25,6 +25,8 @@
 	systemctl disable firewalld
 	systemctl restart network
 
+	sestatus 								- Shows the status of selinux
+	
 	firewall-cmd --get-active-zones
 	firewall-cmd --zone=public --add-port=2888/tcp --permanet
 	firewall-cmd --reload
