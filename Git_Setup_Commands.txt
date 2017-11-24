@@ -21,3 +21,13 @@ Author: Aaron Valoroso
     - git commit -am "commit message"
     - git remote add origin "URL"
     - git push origin master
+
+- When deleteing a local and remote branch
+	- git branch -d "branch_name"
+	- git branch --delete "branch_name"
+	
+- Merging a branch
+	- git checkout "branch_name"
+	- git merge master
+	- git checkout master
+	- git merge "branch_name"
