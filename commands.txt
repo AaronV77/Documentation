@@ -82,3 +82,11 @@
 	exit 											
 	log into node2 then reboot
 
+	---- Conda Commands ----
+	conda inform									- Print out the installed conda version information.
+	conda update PACKAGENAME						- Update any installed program.
+	conda install PACKAGENAME						- Install a program that is avaliable within Anaconda.
+	conda create --name ENVNAME						- Create an environment within Anaconda.
+	conda env list 									- Print out the list of environments that are in Anaconda.
+	conda list										- Print out all the installed programs within the current conda envrionment.
+	conda env remove --name ENVNAME					- Removes an environment within Anaconda.
