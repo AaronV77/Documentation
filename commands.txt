@@ -1,5 +1,5 @@
 
-
+	---- Normal Commands ----
 	id 											- Displays user information.
 	ps 											- Shows the current working processes.
 	chown 										- Changes the owner of the file / directory.
@@ -48,23 +48,15 @@
 	cp -a source/. dest/.										- Will move the entire contents of the source folder to the destination folder.
 	cat /etc/redhat-release										- This will return the RHEL version on RedHat operating systems.
 
+	---- RedHat Specific Commands ----
 	yum cleann all												- Cleans all the repodata up for isntalls
 	yum remove "packagename" 									- Uninstalls the given package.
 
-	---- Vocabulary ----
-	Default Gateway - in computer networking is the node that is assumed to know how to forward packets on to other networks. Typically, in a TCP/IP network, nodes such as servers, workstations and network devices each have a defined a defualt route setting.
-	Netmask - is a 32-bit mask used to divide an IP address into subnets and specify the network's available hosts. In a netmask, two bits are always automatically assigned. 
-	Subnetwork -  is an identfiiably separate part of an organization's network. Typically, a subnet may represent all the machines at one geographic location, in one building, or on the same local are network (LAN).
-		
-	VirtualBox Network Devices:	
-		Not attached 						- In this mode, VirtualBox reports to the guest that a network card is present, but that there is no connection -- as if no Ethernet cable was plugged into the card. This way it is possible to "pull" the virtual Ethernet cable and disrupt the connection, which can be useful to inform a guest operating system that no network connection is available and enforce a reconfiguration.
-		Network Address Translation (NAT) 	- If all you want is to browse the Web, download files and view e-mail inside the guest, then this default mode should be sufficient for you, and you can safely skip the rest of this section. Please note that there are certain limitations when using Windows file sharing (see Section 6.3.3, “NAT limitations” for details).
-		NAT Network 						- The NAT network is a new NAT flavour introduced in VirtualBox 4.3. See 6.4 for details.
-		Bridged networking 					- This is for more advanced networking needs such as network simulations and running servers in a guest. When enabled, VirtualBox connects to one of your installed network cards and exchanges network packets directly, circumventing your host operating system's network stack.
-		Internal networking 				- This can be used to create a different kind of software-based network which is visible to selected virtual machines, but not to applications running on the host or to the outside world.
-		Host-only networking 				- This can be used to create a network containing the host and a set of virtual machines, without the need for the host's physical network interface. Instead, a virtual network interface (similar to a loopback interface) is created on the host, providing connectivity among virtual machines and the host.
-		Generic networking 					- Rarely used modes share the same generic network interface, by allowing the user to select a driver which can be included with VirtualBox or be distributed in an extension pack.	
-		
+	---- Ubuntu Specific Commands ----
+	sudo apt-get Update											- Update an Ubuntu system.
+	sudo passwd													- Will change the root default password.
+	sudo mount -t vboxsf -o uid=1000,gid=1000 Shared ~/Shared	- Will mount a shared folder 
+
 	---- Process for creating a new user ----
 	useradd -u 1000 -g 500 -d /users/user1 user1	- Create a user with a uid, gid, and a home directory
 	passed user1									- Give the user a new password.
@@ -90,3 +82,18 @@
 	conda env list 									- Print out the list of environments that are in Anaconda.
 	conda list										- Print out all the installed programs within the current conda envrionment.
 	conda env remove --name ENVNAME					- Removes an environment within Anaconda.
+
+	---- Vocabulary ----
+	Default Gateway - in computer networking is the node that is assumed to know how to forward packets on to other networks. Typically, in a TCP/IP network, nodes such as servers, workstations and network devices each have a defined a defualt route setting.
+	Netmask - is a 32-bit mask used to divide an IP address into subnets and specify the network's available hosts. In a netmask, two bits are always automatically assigned. 
+	Subnetwork -  is an identfiiably separate part of an organization's network. Typically, a subnet may represent all the machines at one geographic location, in one building, or on the same local are network (LAN).
+		
+	VirtualBox Network Devices:	
+		Not attached 						- In this mode, VirtualBox reports to the guest that a network card is present, but that there is no connection -- as if no Ethernet cable was plugged into the card. This way it is possible to "pull" the virtual Ethernet cable and disrupt the connection, which can be useful to inform a guest operating system that no network connection is available and enforce a reconfiguration.
+		Network Address Translation (NAT) 	- If all you want is to browse the Web, download files and view e-mail inside the guest, then this default mode should be sufficient for you, and you can safely skip the rest of this section. Please note that there are certain limitations when using Windows file sharing (see Section 6.3.3, “NAT limitations” for details).
+		NAT Network 						- The NAT network is a new NAT flavour introduced in VirtualBox 4.3. See 6.4 for details.
+		Bridged networking 					- This is for more advanced networking needs such as network simulations and running servers in a guest. When enabled, VirtualBox connects to one of your installed network cards and exchanges network packets directly, circumventing your host operating system's network stack.
+		Internal networking 				- This can be used to create a different kind of software-based network which is visible to selected virtual machines, but not to applications running on the host or to the outside world.
+		Host-only networking 				- This can be used to create a network containing the host and a set of virtual machines, without the need for the host's physical network interface. Instead, a virtual network interface (similar to a loopback interface) is created on the host, providing connectivity among virtual machines and the host.
+		Generic networking 					- Rarely used modes share the same generic network interface, by allowing the user to select a driver which can be included with VirtualBox or be distributed in an extension pack.	
+		

@@ -11,7 +11,7 @@ then
 	sudo apt-get update	&& sudo apt-get install -f		# Fetches the list of available updates.
 	sudo apt-get upgrade							 	# Strictly upgraades the current packages.
 	sudo apt-get dist-upgrade							# Installs updates (new ones).
-	sudo apt-get install geany							# Download geany.
+	# sudo apt-get install geany							# Download geany.
 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - # Get the key and download the package.
 	sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'	# Redirect the update source url to the source file.
 	sudo apt-get update									# Update the system.
@@ -24,16 +24,23 @@ then
 	sudo apt-get install flashplugin-installer			# Install the application on the system if it is not already.
 	sudo apt-get install cmatrix						# Install the application on the system if it is not already.
 	curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+	chmod 777 ./Anaconda3-4.2.0-Linux-x86_64.sh
+	./Anaconda3-4.2.0-Linux-x86_64.sh
+	export PATH=~/anaconda3/bin:$PATH
+	conda update --prefix /home/valorosoa/anaconda3 anaconda
 	gsettings set com.canonical.Unity.Launcher launcher-position Bottom	# Move the navigation bar to the bottom of the screen.
 	cd /usr/share/applications											# Change directories.
 	mv ubuntu-amazon-default.desktop ../~ubuntu-amazon-default.desktop	# Comment out the file so that Amazon app / link is non-exsisting.
-	git clone https://www.github.com/codebrainz/geany-themes
-	cd /geany-themes
-	./install.sh
+	# git clone https://www.github.com/codebrainz/geany-themes
+	# cd /geany-themes
+	# ./install.sh
 fi
 
 reset
 reboot
+
+# Becareful some Ubuntu versions are on life cycles and end life. 
+# So if things are not updating then that Image has lost support.
 
 # If the setup for git fails to be able to clone then you might have to do the following.
 # ssh-keygen -t rsa -C "your email for GitHub"
