@@ -96,4 +96,5 @@
 		Internal networking 				- This can be used to create a different kind of software-based network which is visible to selected virtual machines, but not to applications running on the host or to the outside world.
 		Host-only networking 				- This can be used to create a network containing the host and a set of virtual machines, without the need for the host's physical network interface. Instead, a virtual network interface (similar to a loopback interface) is created on the host, providing connectivity among virtual machines and the host.
 		Generic networking 					- Rarely used modes share the same generic network interface, by allowing the user to select a driver which can be included with VirtualBox or be distributed in an extension pack.	
-		
+
+sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) Shared ~/Shared/
