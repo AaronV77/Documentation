@@ -1,0 +1,36 @@
+
+The inforamtion that is in this file is for working with the coreutils repository. The 
+following information will be done on Ubuntu 16.04. 
+
+
+    Install the following packages in order to compile the packages:
+
+        sudo apt-get install autoconf
+        sudo apt-get install autopoint
+        sudo apt-get install flex
+        sudo apt-get install bison
+        sudo apt-get install gperf
+        sudo apt-get install makeinfo
+        sudo apt-get install texinfo
+    
+    Grab the latest versions of the coreutils and gnulib repositories:
+        git clone git://git.sv.gnu.org/coreutils
+        git clone https://github.com/coreutils/gnulib.git
+    
+    Move into the coreutils folder, setup the gnulib export, and compile!
+        export GNULIB_SRCDIR=/Path/To/gnulib
+        ./bootstrap
+        ./configure
+        make
+    
+Some notes:
+
+    ./bootstrap
+    This file is to get and check other files needed to build the application. 
+
+    ./configureThe configure script is responsible for getting ready to build the software on your 
+    specific system. It makes sure all of the dependencies for the rest of the build and install 
+    process are available, and finds out whatever it needs to know to use those dependencies.
+    Unix programs are often written in C, so we’ll usually need a C compiler to build them. In 
+    these cases the configure script will establish that your system does indeed have a C compiler, 
+    and find out what it’s called and where to find it.

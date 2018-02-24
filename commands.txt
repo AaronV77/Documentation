@@ -98,3 +98,4 @@
 		Generic networking 					- Rarely used modes share the same generic network interface, by allowing the user to select a driver which can be included with VirtualBox or be distributed in an extension pack.	
 
 sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) Shared ~/Shared/
+umount /media/sf_Shared
