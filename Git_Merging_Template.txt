@@ -1,0 +1,33 @@
+
+When working with issues in a repository:
+
+    - Make sure that master is up-to-date on your machine.
+    - Create a new branch off of the master branch.
+        - Type: git checkout -b "The Branch Name"
+    - Move over to the new branch.
+        - Type: git checkout "The Branch Name"
+    - Make your changes or bug fixes.
+
+    - If you are working on your own branch for a big team and master is getting
+    updated daily or weekly, then you have to make sure that your branch is staying
+    up-to-date with master. The reason for this is because at the time you created
+    your branch off of master, and to the time when you merge your changes back
+    into master, the master branch could have changed since then. So it is good 
+    practice to move onto your master branch, update it, switch back to your branch,
+    and merge the new master changes into your branch, before you merge your changes
+    into master. Make sure to re-test your code to see if it is still working,
+    even with the new master changes. Doing this will make sure that your code is 
+    working correctly with the new changes, and will make a seemless intergration of
+    your changes onto the master branch. The commands are listed below:
+
+        Type: git checkout master
+        Type: git pull
+        Type: git checkout "The Branch Name"
+        Type: git merge master
+
+    - Switch back over to the master branch.
+        - Type: git checkout master
+    - Merge the changes of the branch that you created.
+        - Type: git merge "The Branch Name"
+    - Then delete the branch.
+        - Type: git branch -d "The Branch Name"
