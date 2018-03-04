@@ -23,11 +23,15 @@ then
     git clone https://github.com/AaronV77/Algorithms.git
     git clone https://github.com/AaronV77/Headers.git
     git clone https://github.com/AaronV77/Thursday.git
+    git clone https://github.com/AaronV77/quest.git
+    git clone https://github.com/AaronV77/HydroShare.git
+    git clone https://github.com/AaronV77/Python.git
+    git clone https://github.com/AaronV77/User-Prompt-Input-Editor.git
     cd ..
     mv GitHub_Manager.sh GitHub_Repos/
 
 else
-    array=("Thursday" "Lustre" "Documentation" "Web" "Headers" "Algorithms")
+    array=("Thursday" "Lustre" "Documentation" "Web" "Headers" "Algorithms" "quest" "Python" "HydroShare" "User-Prompt-Input-Editor")
     for i in "${array[@]}"
     do
         echo
