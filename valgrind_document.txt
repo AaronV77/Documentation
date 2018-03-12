@@ -1,0 +1,22 @@
+
+The inforamtion that is in this file is for working with valgrind, and
+how to use the application.
+
+    Step-1:
+        Install valgrind on your system, I will be using Ubuntu.
+        sudo apt-get install valgrind
+
+    Step-2:
+        Compile your program as such:
+
+            c++ -g my_example.cpp
+    
+    Step-3: 
+        Run the program with valgrind:
+
+            valgrind --leak-check=yes ./a.out 
+
+
+
+
+

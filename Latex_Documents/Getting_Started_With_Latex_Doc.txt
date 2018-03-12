@@ -1,0 +1,35 @@
+
+
+Welcome! This document will help you learn what Latex is and how to use it quickly,
+where as it took me hours to learn all the right stuff. There is a lot of great 
+tutorials online but they are either out of date or to complicated for a basic 
+tutorial. 
+
+Installation:
+
+    Ubuntu:
+        sudo apt-get install texlive-full
+        sudo apt-get install gv
+
+    Redhat:
+        ?
+
+    Mac:
+        ?
+    
+    Windows:
+        ?
+
+How I want this directory to be setup is to have two main directories, one for 
+learning Latex and another for all the documents that I have created. The 
+tutorial directory will have other directories for each step of the process,
+and a document on how to compile the document. The directory for my stuff will 
+have the same setup.
+
+Here are the commands I found in order to compile / build the documents so that 
+you can view them in a PDF.
+
+    latex "File Name (No extension)"
+    dvips "File Name (No extension)"
+    gv "File Name".ps 
+    ps2pdf "File Name".ps
