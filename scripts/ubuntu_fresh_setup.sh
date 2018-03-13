@@ -36,6 +36,11 @@ then
 	# ./install.sh
 fi
 
+# Add the follwoing to the script but in comments:
+# CoreUtils Installs
+# Other Linux Shells
+# Latex applications
+
 reset
 reboot
 
