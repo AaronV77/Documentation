@@ -8,41 +8,63 @@ VER=$DISTRIB_RELEASE									# Saves the version of the operating system.
 
 if [ $OS = "Ubuntu" ] 
 then
-	sudo apt-get update	&& sudo apt-get install -f		# Fetches the list of available updates.
-	sudo apt-get upgrade							 	# Strictly upgraades the current packages.
-	sudo apt-get dist-upgrade							# Installs updates (new ones).
-	# sudo apt-get install geany							# Download geany.
-	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - # Get the key and download the package.
-	sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'	# Redirect the update source url to the source file.
-	sudo apt-get update									# Update the system.
-	sudo apt-get install google-chrome-stable			# Install the the download package.
-	rm /etc/apt/sources.list.d							# Remove the second source file.										
-	sudo apt-get install git							# Install git features.
-	git config --global user.name "AaronV77"			# Setup the username for GitHub.
-	git config --global user.email "aaronvaloroso77@gmail.com" # Setup the email for GitHub.
-	sudo apt-get install filezilla						# Install the application on the system if it is not already.
-	sudo apt-get install flashplugin-installer			# Install the application on the system if it is not already.
-	sudo apt-get install cmatrix						# Install the application on the system if it is not already.
+	# Get the machine up-to-date and setup.
+	sudo apt-get update	&& sudo apt-get install -f
+	sudo apt-get upgrade
+	sudo apt-get dist-upgrade
+	gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+	cp /usr/share/applications/ubuntu-amazon-default.desktop /usr/share/applications/~ubuntu-amazon-default.desktop
+	rm /usr/share/applications/ubuntu-amazon-default.desktop
+	mv /usr/share/applications/~ubuntu-amazon-default.desktop /usr/share/applications
+
+	# Install Geany and other color packages.
+	# sudo apt-get install geany
+	# git clone https://www.github.com/codebrainz/geany-themes
+	# cd /geany-themes
+	# ./install.sh	
+
+	# Process for setuping and installing chrome.
+	# wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+	# sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+	# sudo apt-get update
+	# sudo apt-get install google-chrome-stable
+	# rm /etc/apt/sources.list.d
+
+	# Setup git
+	sudo apt-get install git
+	git config --global user.name ""
+	git config --global user.email ""
+
+	# Get other shells
+	# sudo apt-get install zsh
+	# sudo apt-get install csh
+	# sudo apt-get install ksh
+
+	# For Latex
+	sudo apt-get install texlive-full
+	sudo apt-get install texmaker
+	
+	# Other Packages
+	sudo apt-get install filezilla
+	sudo apt-get install flashplugin-installer
+	sudo apt-get install cmatrix	
+
+	# For Anaconda and Python 3.6
 	curl -O https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
 	chmod 777 ./Anaconda3-4.2.0-Linux-x86_64.sh
 	./Anaconda3-4.2.0-Linux-x86_64.sh
-	export PATH=~/anaconda3/bin:$PATH
-	conda update --prefix /home/valorosoa/anaconda3 anaconda
-	gsettings set com.canonical.Unity.Launcher launcher-position Bottom	# Move the navigation bar to the bottom of the screen.
-	cd /usr/share/applications											# Change directories.
-	mv ubuntu-amazon-default.desktop ../~ubuntu-amazon-default.desktop	# Comment out the file so that Amazon app / link is non-exsisting.
-	# git clone https://www.github.com/codebrainz/geany-themes
-	# cd /geany-themes
-	# ./install.sh
+	conda update conda
+	# export PATH=~/anaconda3/bin:$PATH
+
 fi
 
 # Add the follwoing to the script but in comments:
 # CoreUtils Installs
-# Other Linux Shells
-# Latex applications
 
 reset
 reboot
+
+# Notes:
 
 # Becareful some Ubuntu versions are on life cycles and end life. 
 # So if things are not updating then that Image has lost support.
