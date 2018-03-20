@@ -20,6 +20,8 @@ When working with issues in a repository:
     working correctly with the new changes, and will make a seemless intergration of
     your changes onto the master branch. The commands are listed below:
 
+        When pushing your commits to the new branch do the following: git push origin "branch"
+
         Type: git checkout master
         Type: git pull
         Type: git checkout "The Branch Name"
