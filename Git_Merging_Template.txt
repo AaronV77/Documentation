@@ -20,7 +20,7 @@ When working with issues in a repository:
     working correctly with the new changes, and will make a seemless intergration of
     your changes onto the master branch. The commands are listed below:
 
-        When pushing your commits to the new branch do the following: git push origin "branch"
+        When pushing your commits to the new branch do the following: git push origin "branch" or git push --set-upstream origin <branch>
 
         Type: git checkout master
         Type: git pull
@@ -33,3 +33,6 @@ When working with issues in a repository:
         - Type: git merge "The Branch Name"
     - Then delete the branch.
         - Type: git branch -d "The Branch Name"
+
+
+        Doh. Discord can't establish a UDP connection to your real-time communication server. We'll try again in a moment. If Discord keeps getting stuck in this step, check out this fancy article to help resolve the problem.
