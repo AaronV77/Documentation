@@ -20,6 +20,7 @@ When working with issues in a repository:
     working correctly with the new changes, and will make a seemless intergration of
     your changes onto the master branch. The commands are listed below:
 
+        Try this before pushing: git remote set-url origin https://github.com/RemiB/myrepo.git
         When pushing your commits to the new branch do the following: git push origin "branch" or git push --set-upstream origin <branch>
 
         Type: git checkout master
