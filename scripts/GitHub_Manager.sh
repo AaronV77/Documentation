@@ -17,16 +17,16 @@ then
     
     mkdir GitHub_Repos
     cd GitHub_Repos
-	git clone https://github.com/AaronV77/Lustre.git
-    git clone https://github.com/AaronV77/Documentation.git
-    git clone https://github.com/AaronV77/Web.git
-    git clone https://github.com/AaronV77/Algorithms.git
-    git clone https://github.com/AaronV77/Thursday.git
-    git clone https://github.com/AaronV77/quest.git
-    git clone https://github.com/AaronV77/HydroShare.git
-    git clone https://github.com/AaronV77/Python.git
-    git clone https://github.com/AaronV77/User-Prompt-Input-Editor.git
-    git clone https://github.com/AaronV77/Titan.git
+    git clone git@github.com:AaronV77/Lustre.git
+    git clone git@github.com:AaronV77/Documentation.git
+    git clone git@github.com:AaronV77/Web.git
+    git clone git@github.com:Algorithms.git
+    git clone git@github.com:Thursday.git
+    git clone git@github.com:quest.git
+    git clone git@github.com:HydroShare.git
+    git clone git@github.com:Python.git
+    git clone git@github.com:User-Prompt-Input-Editor.git
+    git clone git@github.com:AaronV77/Titan.git
     cd ..
     mv GitHub_Manager.sh GitHub_Repos/
 
@@ -45,7 +45,7 @@ else
             git pull
             cd ..
         else 
-            git clone https://github.com/AaronV77/"$i".git
+            git clone git@github.com:/AaronV77/"$i".git
         fi
 
     done

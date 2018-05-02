@@ -87,6 +87,7 @@
 	conda update PACKAGENAME									- Update any installed program.
 	conda install PACKAGENAME									- Install a program that is avaliable within Anaconda.
 	conda create --name ENVNAME									- Create an environment within Anaconda.
+	conda create --name ENVNAME python=3.6						- Create an environment and specify what version of python you want to use.
 	conda env list 												- Print out the list of environments that are in Anaconda.
 	conda list													- Print out all the installed programs within the current conda envrionment.
 	conda env remove --name ENVNAME								- Removes an environment within Anaconda.
