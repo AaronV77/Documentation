@@ -1,0 +1,78 @@
+This is a helpful document for LaTex.
+
+    Classes:
+        documentclass:
+            Types:
+                - article: for articles in scientific
+                - IEEEtran: for articles with the IEEE Transactions format.
+                - proc: a class for proceedings based on the article class.
+                - report: for longer reports containing several chapters, small books, thesis.
+                - book: for real books
+                - slides: for slides, this class will use big sans serif letters.
+                - memoir: for changing sensibly the output of the document. It is based on the bookclass, but you can create any kind of document with it.
+                - letter: for writing letters.
+                - beamer: for writing presentations.
+           
+            Options:
+                - 10pt: Sets the size of the main font in the document. If no option is specified, 10pt is assumed.
+                - a4papper, letterpapper: Defines the paper size. The default size is letterpaper.
+                - fleqn: Typesets displayed formulas left-aligned instead of centered.
+                - leqno: Places the numbering of formulas on the left hand side instead of the right.
+                - titlepage, notitlepage: Specifies whether a new page should be started after the document title or not. 
+                The article class does not start a new page by default, while report and book do.
+                - twocolumn: Instructs LaTeX to typeset the document in two columns instead of one.
+                - twoside, oneside: Specifies whether double or single sided output should be generated. The classes 
+                article and report are single sided and the book class is double sided by default. Note that this option 
+                concerns the style of the document only. The option twoside does not tell the printer you use that it should 
+                actually make a two-sided printout.
+                - landscape: Changes the layout of the document to print in landscape mode.
+                - openright, openany: Makes chapters begin either only on right hand pages or on the next page available. 
+                This does not work with the article class, as it does not know about chapters. The report class by default starts 
+                chapters on the next page available and the book class starts them on right hand pages.
+                - draft: Makes LaTeX indicate hyphenation and justification problems with a small square in the right-hand margin 
+                of the problem line so they can be located quickly by a human. It also suppresses the inclusion of images and shows 
+                only a frame where they would normally occur.
+
+            Examples:
+                - \documentclass{article}
+                - \documentclass[11pt,a4papper]{article}
+    
+    Commands:
+		\author{"name"}						- Will set the author for the document. This will not print anything.
+        \being{document}    				- The start of what ever is between the two curly braces.
+		\centerline{"part to center"}		- Will center the part between the curly braces.
+		\chapter            				- Will create a section for a chapter in a book and report only document.
+        \date{"date"}						- Will set the date for the document. This will not print anything.
+		\end{document}      				- The end of the document or whatever class you initialized at the top of your paper.
+        \indent            					- Will indent with four spaces.
+        \maketitle          				- Usually goes at the very bottom of all your title stuff. This provides default configurations for a title page.
+		\noindent           				- Will unindent the default indentation done by LaTex.        
+		\paragraph          				- Will create a paragraph.
+        \parindent{4em}						- Will set the indent length of the paragraph.
+		\section            				- Will create a section for content.
+        \setlength{\parindent}{4em}			- Goes at the top before the begin, and for this example will set the indent for every paragraph.
+		\subparagraph       				- Will create a sub-paragraph.
+        \subsection         				- Will create a sub-section for content.
+        \subsubsection      				- Will create a sub-sub-section for content.
+		\textbf{"part to be bold"} 			- Will bold the part in the curly braces. 
+		\textit{"part to be italicized"}	- Will italicized the part in the curly braces.
+        \title{...}         				- Will create a title for the paper.
+		\underline{"underline the part"
+
+    Special Characters:
+        \\      - This will create a newline, but also having an empty line between two lines will create the same effect.
+		\\[1in] - This will put a one inch newline.
+		\\[1cm] - This will put a one cm newline.
+        %       - This the starting character for comments.
+
+    Examples:
+        Ex-1:
+            \title{How to Structure a LaTeX Document}
+            \author{Andrew Roberts}
+            \date{December 2004}
+            \maketitle
+
+    Notes:
+        - The area between \documentclass{...} and \begin{document} is called the preamble. It normally contains commands that affect the entire
+        document. After the preamble, the text of your document is enclosed between two commands which identify the beginning an eend of the actual
+        document.

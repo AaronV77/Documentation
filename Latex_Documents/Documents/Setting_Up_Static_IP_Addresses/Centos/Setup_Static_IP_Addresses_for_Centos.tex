@@ -1,0 +1,59 @@
+\documentclass[11pt, a4papper]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{fancyhdr, changepage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\thepage}
+
+\setlength{\parindent}{4em}
+
+\begin{document}
+\noindent\textbf{Author: } Aaron Valoroso \\
+\textbf{Date: } May 25th, 2018 \\
+\textbf{Topic: } Setting Up Static IP Addresses \\
+\textbf{OS: } RedHat Centos \\
+\textbf{OS-Version: } 7 \\[1cm]
+
+\textbf{Overview / Setup: } \\
+\begin{adjustwidth}{3cm}{} 
+To be able to follow along you either need two virtual or physical machines that are connected together. This can be done with lots of computers all connected together but we will just focus on just two machines. My first machine will be called Clone1 and the second will be Clone2 and they both will be virtual machines on VirtualBox. If you don?t know how to setup a virtual machine then look for my document on how to setup a virtual machine for your specific needs. Now since we are using Centos 7 I've had problems before where all the network drivers come up on boot, so you might have to learn how to enable your network drivers to always come up on boot. \\
+\end{adjustwidth}
+%--------------------------------------------------------------------------------------------------
+\indent \indent \textbf{Step-1: } \\
+\begin{adjustwidth}{3cm}{} 
+\begin{adjustwidth}{}{} 
+\indent - The first step is to make sure that you have an internet connection and that your network devices are current up and running. Now if they are not then you will have to go into setting and enable the devices to turn on at boot. Another option that you can do is install NetworkManager-tui, this is a helpful application for messing around with network devices on terminal. Now, I will be giving clone1 192.168.20.201, and give clone2 192.168.20.202 for addresses. \\
+\end{adjustwidth}
+%--------------------------------------------------------------------------------------------------
+\noindent - Type: \textbf{sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s8} \\
+\begin{adjustwidth}{1cm}{} 
+\indent - We want the enp0s8 because it is the driver for communicating with other virtual machines, but it can be something different as well. So, change the following file to look like the following.\\
+\pagebreak
+
+\indent - TYPE=Ethernet \\
+\indent - BOOTPROTO=static \\
+\indent - DEFROUTE=yes \\
+\indent - \texttt{IPV4\_FAILURE\_FATAL=no} \\
+\indent - IPV6INIT=yes \\
+\indent - \texttt{IPV6\_AUTOCONF=yes} \\
+\indent - \texttt{IPV6\_DEFROUTE=yes} \\
+\indent - \texttt{IPV6\_FAILURE\_FATAL=no} \\
+\indent - \texttt{IPV6\_ADDR\_GEN\_MODE=stable-privacy} \\
+\indent - NAME=enp0s8 \\
+\indent - UUID=f328ad46-ecf6-438e-9409-ca6bd45945fe \\
+\indent - DEVICE=enp0s8 \\
+\indent - ONBOOT=yes \\
+\indent - IPADDR=192.168.200.201 \\
+\indent - NETMASK=255.255.255.0 \\ \\
+\end{adjustwidth}
+%--------------------------------------------------------------------------------------------------
+\noindent - Type: \textbf{sudo service networking restart} \\
+\begin{adjustwidth}{1cm}{}
+\indent - The example above we can do for clone1, then all you have to do is repeat the same process on clone2 but give it a different IP address. So, for clone2 just give it the following address: 192.168.200.201 \\ \\
+ - After the previous step has been finished, go ahead and do the following command: \textbf{ping 192.168.200.201} from clone1 and vice versa from clone2 but with the 200 address. You should see data being sent across to either machine. \\ \\
+ - Make sure to not give an address last three numbers bigger than 299, you will run into complications.
+ \end{adjustwidth}
+ %--------------------------------------------------------------------------------------------------
+\end{adjustwidth}
+\end{document}

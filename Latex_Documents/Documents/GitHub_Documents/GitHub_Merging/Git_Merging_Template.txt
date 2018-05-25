@@ -2,6 +2,7 @@
 When working with issues in a repository:
 
     - Make sure that master is up-to-date on your machine.
+	- Just do a git pull.
     - Create a new branch off of the master branch.
         - Type: git checkout -b "The Branch Name"
     - Move over to the new branch.
@@ -17,7 +18,7 @@ When working with issues in a repository:
     and merge the new master changes into your branch, before you merge your changes
     into master. Make sure to re-test your code to see if it is still working,
     even with the new master changes. Doing this will make sure that your code is 
-    working correctly with the new changes, and will make a seemless intergration of
+    working correctly with the new changes, and will make a seamless integration of
     your changes onto the master branch. The commands are listed below:
 
         Try this before pushing: git remote set-url origin https://github.com/RemiB/myrepo.git
@@ -28,12 +29,3 @@ When working with issues in a repository:
         Type: git checkout "The Branch Name"
         Type: git merge master
 
-    - Switch back over to the master branch.
-        - Type: git checkout master
-    - Merge the changes of the branch that you created.
-        - Type: git merge "The Branch Name"
-    - Then delete the branch.
-        - Type: git branch -d "The Branch Name"
-
-
-        Doh. Discord can't establish a UDP connection to your real-time communication server. We'll try again in a moment. If Discord keeps getting stuck in this step, check out this fancy article to help resolve the problem.

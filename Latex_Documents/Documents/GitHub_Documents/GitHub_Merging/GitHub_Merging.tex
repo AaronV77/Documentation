@@ -1,0 +1,70 @@
+\documentclass[11pt, a4papper]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{fancyhdr, changepage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\thepage}
+
+\setlength{\parindent}{4em}
+
+
+\begin{document}
+\noindent\textbf{Author: } Aaron Valoroso \\
+\textbf{Date: } May 25th, 2018 \\
+\textbf{Topic: } GitHub Cheat Sheet \\
+\textbf{OS: } Ubuntu \\
+\textbf{OS-Version: } 16.04 \\[1cm]
+
+\textbf{Overview: } \\
+\begin{adjustwidth}{3cm}{} 
+This document covers the basics for merging git branches. I'm still learning this process, and do not have it mastered just yet. Everything below will get you started, because when you are working on a bigger team things get a lot more complicated. Even though that this document is pretty short with information, more will be added in the future. If you feel like I left out the most important parts or anything else please feel free to updated the document and create a new PR for it. Thanks. \\
+\end{adjustwidth}
+%--------------------------------------------------------------------------------------------------
+\indent \indent \textbf{Step-1:} \\
+\begin{adjustwidth}{3cm}{} 
+- Make sure that master is up-to-date on your machine. \\
+\indent - Type: \textbf{git pull.} \\
+- Create a new branch off of the master branch. \\
+\indent - Type: \textbf{git checkout -b "The Branch Name"} \\
+- Move over to the new branch. \\
+\indent - Type: \textbf{git checkout "The Branch Name"} \\
+- Make your changes or bug fixes. \\
+\end{adjustwidth}
+%--------------------------------------------------------------------------------------------------
+\indent \indent \textbf{Step-2:} \\
+\begin{adjustwidth}{3cm}{} 
+If you are working on your own branch for a big team and master is getting updated daily or weekly, then you have to make sure that your branch is staying up-to-date with master. The reason for this is because at the time you created your branch off of master, and to the time when you merge your changes back into master, the master branch could have changed since then. So it is good  practice to move onto your master branch, update it, switch back to your branch, and merge the new master changes into your branch, before you merge your changes into master. Make sure to re-test your code to see if it is still working, even with the new master changes. Doing this will make sure that your code is working correctly with the new changes, and will make a seamless integration of your changes onto the master branch. \\
+
+\pagebreak
+\noindent Try this before pushing: \textbf{git remote set-url origin "Repo URL"} \\ \\
+When pushing your commits to the new branch do the following: \textbf{git push origin "branch"} or \textbf{git push --set-upstream origin "branch"} \\
+
+\noindent Type: \textbf{git checkout master} \\
+Type: \textbf{git pull} \\
+Type: \textbf{git checkout "The Branch Name"} \\
+Type: \textbf{git merge master} \\
+
+\end{adjustwidth}
+%--------------------------------------------------------------------------------------------------
+\indent \indent \textbf{Step-3:} \\
+\begin{adjustwidth}{3cm}{} 
+- Switch back over to the master branch. \\
+\indent - Type: \textbf{git checkout master} \\
+- Merge the changes of the branch that you created. \\
+\indent - Type: \textbf{git merge "The Branch Name"} \\
+- Then delete the branch. \\
+\indent - Type: \textbf{git branch -d "The Branch Name"} \\
+\end{adjustwidth}
+%--------------------------------------------------------------------------------------------------
+\end{document}
+
+
+
+
+
+
+
+
+
+
