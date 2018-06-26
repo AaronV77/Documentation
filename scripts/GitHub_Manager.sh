@@ -17,7 +17,6 @@ then
     
     mkdir GitHub_Repos
     cd GitHub_Repos
-    git clone git@github.com:AaronV77/Lustre.git
     git clone git@github.com:AaronV77/Documentation.git
     git clone git@github.com:AaronV77/Web.git
     git clone git@github.com:Algorithms.git
@@ -26,12 +25,11 @@ then
     git clone git@github.com:HydroShare.git
     git clone git@github.com:Python.git
     git clone git@github.com:User-Prompt-Input-Editor.git
-    git clone git@github.com:AaronV77/Titan.git
     cd ..
     mv GitHub_Manager.sh GitHub_Repos/
 
 else
-    array=("Thursday" "Lustre" "Documentation" "Web" "Titan" "Algorithms" "quest" "Python" "HydroShare" "User-Prompt-Input-Editor")
+    array=("Thursday" "Documentation" "Web" "Algorithms" "quest" "Python" "HydroShare" "User-Prompt-Input-Editor")
     for i in "${array[@]}"
     do
         echo
